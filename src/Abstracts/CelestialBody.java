@@ -1,3 +1,5 @@
+package Abstracts;
+
 public abstract class CelestialBody {
     private String name;
     public CelestialBody(String name) {

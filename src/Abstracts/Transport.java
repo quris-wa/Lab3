@@ -1,3 +1,10 @@
+package Abstracts;
+
+import Abstracts.Location;
+import Abstracts.Material;
+import Abstracts.Point;
+import Abstracts.canChangeLoc;
+
 public abstract class Transport implements canChangeLoc {
     private String name;
     private Point point;
@@ -11,7 +18,7 @@ public abstract class Transport implements canChangeLoc {
         this.joinToStory();
         System.out.println("Транспорт " + name + " находится в локации " + this.location.getLocationName());
     }
-    void toShineR(){
+    public void toShineR(){
         if(getName().equals("Ракета") && material.equals(Material.METAL)){
             System.out.println(name + " поблескивала своими стальными боками");
         }

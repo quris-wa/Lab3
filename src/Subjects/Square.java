@@ -1,7 +1,13 @@
-public class Road extends Location{
+package Subjects;
+
+import Abstracts.Location;
+import Abstracts.Point;
+import Abstracts.Time;
+
+public class Square extends Location {
     private int length;
-    public Road(String name, int length, Time time) {
-        super(name, time);
+    public Square(String name, int length, Time time, Point point) {
+        super(name, time, point);
         this.length = length;
     }
     @Override
@@ -12,7 +18,7 @@ public class Road extends Location{
     @Override
     public int hashCode() {
         int result = this.getLocationName() == null ? 0 : this.getLocationName().hashCode();
-        return (result) * 20;
+        return (result) * 60;
     }
 
     @Override
@@ -23,11 +29,11 @@ public class Road extends Location{
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        return ((Road) obj).getLocationName().equals(this.getLocationName());
+        return ((Square) obj).getLocationName().equals(this.getLocationName());
     }
 
     @Override
     public String toString() {
-        return "Road: " + this.getLocationName();
+        return "Subjects.Square: " + this.getLocationName();
     }
 }

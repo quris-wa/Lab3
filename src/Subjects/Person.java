@@ -1,4 +1,8 @@
-public class Person implements canChangeLoc{
+package Subjects;
+
+import Abstracts.*;
+
+public class Person implements canChangeLoc {
     private String name;
     private Location location;
     private Point point;
@@ -24,16 +28,16 @@ public class Person implements canChangeLoc{
     @Override
     public void setLocation(Location location) {
         this.location = location;
-        if(point.getX() == 0)System.out.println("Персонаж " + name + " находится в локации " + location.getLocationName() + " его координаты " + point.getX());
+        if(point.getX() == 0 && point.getY() == 0)System.out.println("Персонаж " + name + " находится в локации " + location.getLocationName() + " его координаты " + point.getX() + "," + point.getY());
     }
     public void go(Location location) {
         point.sumX(10);
         setLocation(location);
         if(location.getLocationName().equals("Круглая площадь")){
-            System.out.println("Персонаж " + name + " прокрадывается в локацию " + location.getLocationName() + " его координаты " + point.getX());
+            System.out.println("Персонаж " + name + " прокрадывается в локацию " + location.getLocationName() + " его координаты " + point.getX()+ "," + point.getY());
         }
         else {
-            System.out.println("Персонаж " + name + " идет в локацию " + location.getLocationName() + " его координаты " + point.getX());
+            System.out.println("Персонаж " + name + " идет в локацию " + location.getLocationName() + " его координаты " + point.getX()+ "," + point.getY());
         }
     }
 

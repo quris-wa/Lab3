@@ -1,4 +1,8 @@
-public class Moon extends CelestialBody{
+package Subjects;
+
+import Abstracts.CelestialBody;
+
+public class Moon extends CelestialBody {
     private String name;
     public Moon(String name) {
         super(name);
@@ -10,7 +14,7 @@ public class Moon extends CelestialBody{
     }
     @Override
     public String toString() {
-        return "Moon: " + this.getName();
+        return "Subjects.Moon: " + this.getName();
     }
     @Override
     public boolean equals(Object obj) {

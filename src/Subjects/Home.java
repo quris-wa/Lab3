@@ -1,7 +1,12 @@
-public class CosmicCity extends Location{
+package Subjects;
+
+import Abstracts.*;
+import Story.*;
+
+public class Home extends Location {
     private int length;
-    public CosmicCity(String name, int length, Time time) {
-        super(name, time);
+    public Home(String name, int length, Time time, Point point) {
+        super(name, time, point);
         this.length = length;
     }
     @Override
@@ -12,7 +17,7 @@ public class CosmicCity extends Location{
     @Override
     public int hashCode() {
         int result = this.getLocationName() == null ? 0 : this.getLocationName().hashCode();
-        return (result) * 40;
+        return (result) * 1;
     }
 
     @Override
@@ -23,11 +28,11 @@ public class CosmicCity extends Location{
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        return ((CosmicCity) obj).getLocationName().equals(this.getLocationName());
+        return ((Road) obj).getLocationName().equals(this.getLocationName());
     }
 
     @Override
     public String toString() {
-        return "CosmicCity: " + this.getLocationName();
+        return "Subjects.Home: " + this.getLocationName();
     }
 }

@@ -1,3 +1,7 @@
+package Subjects;
+
+import Abstracts.IsSleeping;
+
 public class OtherGuys {
     private String name;
     private IsSleeping isSleeping;
@@ -6,7 +10,7 @@ public class OtherGuys {
         this.isSleeping=isSleeping;
         System.out.println(name + " присоедились к истории");
     }
-    void toSleep(){
+    public void toSleep(){
         System.out.println(name + " уснули");
     }
     public String getIsSleeping() {

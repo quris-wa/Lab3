@@ -1,4 +1,11 @@
-public class Rocket extends Transport{
+package Subjects;
+
+import Abstracts.Location;
+import Abstracts.Material;
+import Abstracts.Point;
+import Abstracts.Transport;
+
+public class Rocket extends Transport {
     private String name;
     private Material material;
     public Rocket(String name, Point point, Location location, Material material) {
@@ -30,6 +37,6 @@ public class Rocket extends Transport{
 
     @Override
     public String toString() {
-        return "Rocket: " + this.getName();
+        return "Subjects.Rocket: " + this.getName();
     }
 }
